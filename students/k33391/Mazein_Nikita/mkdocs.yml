@@ -1,0 +1,13 @@
+site_name: Лабораторные работы
+nav:
+  - Home: index.md
+  - LR1:
+    - Home: LR1/index.md
+    - Practices: LR1/practices.md
+    - Authentication: LR1/auth.md
+    - Database: LR1/db.md
+    - Endpoints: LR1/endpoints.md
+    - Main: LR1/main.md
+    - Models: LR1/models.md
+theme:
+  name: readthedocs
