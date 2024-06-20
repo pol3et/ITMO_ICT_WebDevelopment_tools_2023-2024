@@ -72,6 +72,10 @@
     </li>
     <li class="toctree-l3"><a class="reference internal" href="#multiprocessing">Multiprocessing</a>
     </li>
+    <li class="toctree-l3"><a class="reference internal" href="#_2"></a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#_3">Сравнение методов</a>
+    </li>
         </ul>
     </li>
     </ul>
@@ -139,20 +143,33 @@
 <h3 id="ascyncio"><a href="task1/async/">AscyncIO</a></h3>
 <h3 id="threading"><a href="task1/thread/">Threading</a></h3>
 <h3 id="multiprocessing"><a href="task1/multiproc/">Multiprocessing</a></h3>
-<details>
-
+<h3 id="_2"><details></h3>
 <summary>Таблица результатов</summary>
 
-### Сравнение методов
-
-| Метод          | Время (с) |
-|----------------|-----------|
-| AsyncIO        | 0.0329    |
-| Threading      | 0.0339    |
-| Multiprocessing| 0.2460    |
-
+<h3 id="_3">Сравнение методов</h3>
+<table>
+<thead>
+<tr>
+<th>Метод</th>
+<th>Время (с)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>AsyncIO</td>
+<td>0.0329</td>
+</tr>
+<tr>
+<td>Threading</td>
+<td>0.0339</td>
+</tr>
+<tr>
+<td>Multiprocessing</td>
+<td>0.2460</td>
+</tr>
+</tbody>
+</table>
 </details>
-
 <h1 id="2-">Задача 2. Параллельный парсинг веб-страниц с сохранением в базу данных</h1>
 <p><strong>Задача: Напишите программу на Python для параллельного парсинга нескольких веб-страниц с сохранением данных в базу данных с использованием подходов threading, multiprocessing и async. Каждая программа должна парсить информацию с нескольких веб-сайтов, сохранять их в базу данных.</strong></p>
 <p><strong>Подробности задания:</strong></p>
@@ -171,24 +188,38 @@
 <li>Включите в документацию таблицы, отображающие время выполнения каждой программы.</li>
 <li>Прокомментируйте результаты сравнения времени выполнения программ на основе разных подходов.</li>
 </ul>
-<h2 id="_2">Решение</h2>
+<h2 id="_4">Решение</h2>
 <h3 id="database"><a href="task2/db/">Database</a></h3>
 <h3 id="urls"><a href="task2/url/">URLs</a></h3>
 <h3 id="ascyncio_1"><a href="task2/parse_async/">AscyncIO</a></h3>
 <h3 id="threading_1"><a href="task2/parse_thread/">Threading</a></h3>
 <h3 id="multiprocessing_1"><a href="task2/parse_multiproc/">Multiprocessing</a></h3>
-<details>
-
+<h3 id="_5"><details></h3>
 <summary>Таблица результатов</summary>
 
-### Сравнение методов
-
-| Метод          | Время (с) |
-|----------------|-----------|
-| AsyncIO        | 0.9089    |
-| Threading      | 11.8778   |
-| Multiprocessing| 2.5957    |
-
+<h3 id="_6">Сравнение методов</h3>
+<table>
+<thead>
+<tr>
+<th>Метод</th>
+<th>Время (с)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>AsyncIO</td>
+<td>0.9089</td>
+</tr>
+<tr>
+<td>Threading</td>
+<td>11.8778</td>
+</tr>
+<tr>
+<td>Multiprocessing</td>
+<td>2.5957</td>
+</tr>
+</tbody>
+</table>
 </details>
               
             </div>
