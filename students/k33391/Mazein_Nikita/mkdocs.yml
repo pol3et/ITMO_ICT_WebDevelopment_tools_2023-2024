@@ -9,5 +9,17 @@ nav:
     - Endpoints: LR1/endpoints.md
     - Main: LR1/main.md
     - Models: LR1/models.md
+  - LR2:
+    - Home: LR2/index.md
+    - Task 1:
+      - AsyncIO: LR2/task1/async.md
+      - Threading: LR2/task1/thread.md
+      - Multiprocessing: LR2/task1/multiproc.md
+    - Task 2:
+      - Database: LR2/task2/db.md
+      - URLs: LR2/task2/url.md
+      - AsyncIO: LR2/task2/parse_async.md
+      - Threading: LR2/task2/parse_thread.md
+      - Multiprocessing: LR2/task2/parse_multiproc.md
 theme:
   name: readthedocs

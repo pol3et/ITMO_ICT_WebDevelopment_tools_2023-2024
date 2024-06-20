@@ -1,0 +1,30 @@
+{
+    "task1": [
+        {
+            "parser": "async",
+            "time(s)": 0.0329
+        },
+        {
+            "parser": "threading",
+            "time(s)": 0.0339
+        },
+        {
+            "parser": "multiprocessing",
+            "time(s)": 0.2460
+        }
+    ],
+    "task2": [
+        {
+            "parser": "async",
+            "time(s)": 0.9089
+        },
+        {
+            "parser": "threading",
+            "time(s)": 11.8778
+        },
+        {
+            "parser": "multiprocessing",
+            "time(s)": 2.5957
+        }
+    ]
+}

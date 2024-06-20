@@ -12,7 +12,7 @@ from typing_extensions import TypedDict
 logic_router = APIRouter()
 
 @logic_router.post("/task-create")
-def task_create(task: TaskDefault, session=Depends(get_session)) -> TypedDict('Response', {"status": int, "data": Task}):
+def task_create(task: TaskDefault, session=Depends(get_session)) -> TypedDict('Response', {"status": int, "data": Task}): # type: ignore
     task = Task.model_validate(task)
     session.add(task)
     session.commit()
@@ -54,7 +54,7 @@ def task_delete(task_id: int, session=Depends(get_session)):
     return {"ok": True}
 
 @logic_router.post("/schedule-create")
-def schedule_create(schedule: ScheduleDefault, session=Depends(get_session)) -> TypedDict('Response', {"status": int, "data": Schedule}):
+def schedule_create(schedule: ScheduleDefault, session=Depends(get_session)) -> TypedDict('Response', {"status": int, "data": Schedule}): # type: ignore
     schedule = Schedule.model_validate(schedule)
     session.add(schedule)
     session.commit()
@@ -96,7 +96,7 @@ def schedule_delete(schedule_id: int, session=Depends(get_session)):
     return {"ok": True}
 
 @logic_router.post("/reminder-create")
-def reminder_create(reminder: ReminderDefault, session=Depends(get_session)) -> TypedDict('Response', {"status": int, "data": Reminder}):
+def reminder_create(reminder: ReminderDefault, session=Depends(get_session)) -> TypedDict('Response', {"status": int, "data": Reminder}): # type: ignore
     reminder = Reminder.model_validate(reminder)
     session.add(reminder)
     session.commit()
@@ -158,7 +158,7 @@ def add_time_to_task(task_id: int, time_spent: int, session=Depends(get_session)
     return task
 
 @logic_router.get("/user/{user_id}/time-analysis")
-def user_time_analysis(user_id: int, session=Depends(get_session)) -> TypedDict('Response', {"status": int, "time_spent": dict}):
+def user_time_analysis(user_id: int, session=Depends(get_session)) -> TypedDict('Response', {"status": int, "time_spent": dict}): # type: ignore
     user = session.get(User, user_id)
     if not user:
         raise HTTPException(status_code=404, detail="user not found")
