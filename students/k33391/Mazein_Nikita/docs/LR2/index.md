@@ -12,13 +12,9 @@
 
 ## Решение:
 
-### [AscyncIO](task1/async.md)
-### [Threading](task1/thread.md)
-### [Multiprocessing](task1/multiproc.md)
-
-<details>
-
-<summary>Таблица результатов</summary>
+* ### [AscyncIO](task1/async.md)
+* ### [Threading](task1/thread.md)
+* ### [Multiprocessing](task1/multiproc.md)
 
 ### Сравнение методов
 
@@ -27,8 +23,6 @@
 | AsyncIO        | 0.0329    |
 | Threading      | 0.0339    |
 | Multiprocessing| 0.2460    |
-
-</details>
 
 # Задача 2. Параллельный парсинг веб-страниц с сохранением в базу данных
 
@@ -52,15 +46,11 @@
 
 ## Решение
 
-### [Database](task2/db.md)
-### [URLs](task2/url.md)
-### [AscyncIO](task2/parse_async.md)
-### [Threading](task2/parse_thread.md)
-### [Multiprocessing](task2/parse_multiproc.md)
-
-<details>
-
-<summary>Таблица результатов</summary>
+* ### [Database](task2/db.md)
+* ### [URLs](task2/url.md)
+* ### [AscyncIO](task2/parse_async.md)
+* ### [Threading](task2/parse_thread.md)
+* ### [Multiprocessing](task2/parse_multiproc.md)
 
 ### Сравнение методов
 
@@ -69,5 +59,3 @@
 | AsyncIO        | 0.9089    |
 | Threading      | 11.8778   |
 | Multiprocessing| 2.5957    |
-
-</details>
