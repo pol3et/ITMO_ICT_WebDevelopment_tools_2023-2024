@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="shortcut icon" href="../../img/favicon.ico" />
+    <title>Leetcode - Лабораторные работы</title>
+    <link rel="stylesheet" href="../../css/theme.css" />
+    <link rel="stylesheet" href="../../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Leetcode";
+        var mkdocs_page_input_path = "LR1\\leetcode.md";
+        var mkdocs_page_url = null;
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="../.." class="icon icon-home"> Лабораторные работы
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../..">Home</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">LR1</span></p>
+              <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" href="../">Home</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../practices/">Practices</a>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="./">Leetcode</a>
+    <ul class="current">
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="#">Task</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../auth/">Authentication</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../db/">Database</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../endpoints/">Endpoints</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../main/">Main</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../models/">Models</a>
+                </li>
+    </ul>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">LR2</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../LR2/">Home</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../LR2/leetcode/">Leetcode</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="#">Task 1</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../LR2/task1/async/">AsyncIO</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../LR2/task1/thread/">Threading</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../LR2/task1/multiproc/">Multiprocessing</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="#">Task 2</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../LR2/task2/db/">Database</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../LR2/task2/url/">URLs</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../LR2/task2/parse_async/">AsyncIO</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../LR2/task2/parse_thread/">Threading</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../LR2/task2/parse_multiproc/">Multiprocessing</a>
+                </li>
+    </ul>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">LR3</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../LR3/">Home</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../LR3/leetcode/">Leetcode</a>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../..">Лабораторные работы</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../.." class="icon icon-home" aria-label="Docs"></a></li>
+          <li class="breadcrumb-item">LR1</li>
+      <li class="breadcrumb-item active">Leetcode</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h3 id="reverse-words-in-a-string">Reverse Words in a String</h3>
+<p>Given an input string <code>s</code>, reverse the order of the words.</p>
+<pre><code class="language-python">class Solution:
+    def reverseWords(self, s: str) -&gt; str:
+        return ' '.join(reversed(s.split()))
+</code></pre>
+<h3 id="zigzag-conversion">Zigzag Conversion</h3>
+<p>Given a string <code>s</code> and an integer <code>numRows</code>, convert <code>s</code> to a zigzag pattern on a given number of rows.</p>
+<pre><code class="language-python">class Solution:
+    def convert(self, s: str, numRows: int) -&gt; str:
+        if numRows == 1 or numRows &gt;= len(s):
+            return s
+
+        rows = [''] * numRows
+        current_row, step = 0, 1
+
+        for char in s:
+            rows[current_row] += char
+            if current_row == 0:
+                step = 1
+            elif current_row == numRows - 1:
+                step = -1
+            current_row += step
+
+        return ''.join(rows)
+</code></pre>
+<h3 id="two-sum-ii-input-array-is-sorted">Two Sum II - Input Array Is Sorted</h3>
+<p>Given an array of integers that is already sorted in non-decreasing order, find two numbers such that they add up to a specific target number.</p>
+<pre><code class="language-python">class Solution:
+    def twoSum(self, numbers: List[int], target: int) -&gt; List[int]:
+        left, right = 0, len(numbers) - 1
+        while left &lt; right:
+            total = numbers[left] + numbers[right]
+            if total == target:
+                return [left + 1, right + 1]
+            elif total &lt; target:
+                left += 1
+            else:
+                right -= 1
+</code></pre>
+<h3 id="container-with-most-water">Container With Most Water</h3>
+<p>Given <code>n</code> non-negative integers <code>a1, a2, ..., an</code>, where each represents a point at coordinate <code>(i, ai)</code>, <code>n</code> vertical lines are drawn such that the two endpoints of line <code>i</code> is at <code>(i, ai)</code> and <code>(i, 0)</code>. Find two lines, which together with the x-axis forms a container, such that the container contains the most water.</p>
+<pre><code class="language-python">class Solution:
+    def maxArea(self, height: List[int]) -&gt; int:
+        left, right = 0, len(height) - 1
+        max_area = 0
+
+        while left &lt; right:
+            width = right - left
+            max_area = max(max_area, min(height[left], height[right]) * width)
+            if height[left] &lt; height[right]:
+                left += 1
+            else:
+                right -= 1
+
+        return max_area
+</code></pre>
+<h3 id="best-time-to-buy-and-sell-stock-ii">Best Time to Buy and Sell Stock II</h3>
+<p>Say you have an array <code>prices</code> for which the <code>i-th</code> element is the price of a given stock on day <code>i</code>. Design an algorithm to find the maximum profit. You may complete as many transactions as you like (i.e., buy one and sell one share of the stock multiple times).</p>
+<pre><code class="language-python">class Solution:
+    def maxProfit(self, prices: List[int]) -&gt; int:
+        max_profit = 0
+        for i in range(1, len(prices)):
+            if prices[i] &gt; prices[i - 1]:
+                max_profit += prices[i] - prices[i - 1]
+        return max_profit
+</code></pre>
+<h3 id="jump-game-ii">Jump Game II</h3>
+<p>Given an array of non-negative integers <code>nums</code>, you are initially positioned at the first index of the array. Each element in the array represents your maximum jump length at that position. Your goal is to reach the last index in the minimum number of jumps.</p>
+<pre><code class="language-python">class Solution:
+    def jump(self, nums: List[int]) -&gt; int:
+        jumps, current_end, farthest = 0, 0, 0
+        for i in range(len(nums) - 1):
+            farthest = max(farthest, i + nums[i])
+            if i == current_end:
+                jumps += 1
+                current_end = farthest
+        return jumps
+</code></pre>
+<h3 id="h-index">H-Index</h3>
+<p>Given an array of integers <code>citations</code> where <code>citations[i]</code> is the number of citations a researcher received for their <code>i-th</code> paper, calculate the researcher's h-index.</p>
+<pre><code class="language-python">class Solution:
+    def hIndex(self, citations: List[int]) -&gt; int:
+        citations.sort(reverse=True)
+        h = 0
+        for i, c in enumerate(citations):
+            if c &gt;= i + 1:
+                h = i + 1
+            else:
+                break
+        return h
+</code></pre>
+<h3 id="gas-station">Gas Station</h3>
+<p>There are <code>n</code> gas stations along a circular route, where the amount of gas at station <code>i</code> is <code>gas[i]</code>. You have a car with an unlimited gas tank and it costs <code>cost[i]</code> of gas to travel from station <code>i</code> to its next station (<code>i+1</code>). You begin the journey with an empty tank at one of the gas stations. Return the starting gas station's index if you can travel around the circuit once in the clockwise direction, otherwise return <code>-1</code>.</p>
+<pre><code class="language-python">class Solution:
+    def canCompleteCircuit(self, gas: List[int], cost: List[int]) -&gt; int:
+        total_gas, total_cost, start, tank = 0, 0, 0, 0
+        for i in range(len(gas)):
+            total_gas += gas[i]
+            total_cost += cost[i]
+            tank += gas[i] - cost[i]
+            if tank &lt; 0:
+                start = i + 1
+                tank = 0
+        return start if total_gas &gt;= total_cost else -1
+</code></pre>
+<h3 id="integer-to-roman">Integer to Roman</h3>
+<p>Given an integer, convert it to a roman numeral.</p>
+<pre><code class="language-python">class Solution:
+    def intToRoman(self, num: int) -&gt; str:
+        val = [
+            (1000, 'M'), (900, 'CM'), (500, 'D'), (400, 'CD'),
+            (100, 'C'), (90, 'XC'), (50, 'L'), (40, 'XL'),
+            (10, 'X'), (9, 'IX'), (5, 'V'), (4, 'IV'), (1, 'I')
+        ]
+        roman = ''
+        for (i, r) in val:
+            while num &gt;= i:
+                roman += r
+                num -= i
+        return roman
+</code></pre>
+<h3 id="remove-duplicates-from-sorted-array-ii">Remove Duplicates from Sorted Array II</h3>
+<p>Given an integer array <code>nums</code> sorted in non-decreasing order, remove some duplicates in-place such that each unique element appears at most twice.</p>
+<pre><code class="language-python">class Solution:
+    def removeDuplicates(self, nums: List[int]) -&gt; int:
+        if len(nums) &lt;= 2:
+            return len(nums)
+
+        index = 2
+        for i in range(2, len(nums)):
+            if nums[i] != nums[index - 2]:
+                nums[index] = nums[i]
+                index += 1
+
+        return index
+</code></pre>
+<h3 id="rotate-array">Rotate Array</h3>
+<p>Given an integer array <code>nums</code>, rotate the array to the right by <code>k</code> steps, where <code>k</code> is non-negative.</p>
+<pre><code class="language-python">class Solution:
+    def rotate(self, nums: List[int], k: int) -&gt; None:
+        k %= len(nums)
+        nums[:] = nums[-k:] + nums[:-k]
+</code></pre>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../practices/" class="btn btn-neutral float-left" title="Practices"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../auth/" class="btn btn-neutral float-right" title="Authentication">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../practices/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../auth/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "../..";</script>
+    <script src="../../js/theme_extra.js"></script>
+    <script src="../../js/theme.js"></script>
+      <script src="../../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>

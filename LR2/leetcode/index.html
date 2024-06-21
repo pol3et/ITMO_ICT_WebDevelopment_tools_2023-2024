@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="shortcut icon" href="../../img/favicon.ico" />
+    <title>Leetcode - Лабораторные работы</title>
+    <link rel="stylesheet" href="../../css/theme.css" />
+    <link rel="stylesheet" href="../../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Leetcode";
+        var mkdocs_page_input_path = "LR2\\leetcode.md";
+        var mkdocs_page_url = null;
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="../.." class="icon icon-home"> Лабораторные работы
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../..">Home</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">LR1</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../LR1/">Home</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../LR1/practices/">Practices</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../LR1/leetcode/">Leetcode</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="#">Task</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../LR1/auth/">Authentication</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../LR1/db/">Database</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../LR1/endpoints/">Endpoints</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../LR1/main/">Main</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../LR1/models/">Models</a>
+                </li>
+    </ul>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">LR2</span></p>
+              <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" href="../">Home</a>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="./">Leetcode</a>
+    <ul class="current">
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="#">Task 1</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../task1/async/">AsyncIO</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../task1/thread/">Threading</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../task1/multiproc/">Multiprocessing</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="#">Task 2</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../task2/db/">Database</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../task2/url/">URLs</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../task2/parse_async/">AsyncIO</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../task2/parse_thread/">Threading</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../task2/parse_multiproc/">Multiprocessing</a>
+                </li>
+    </ul>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">LR3</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../LR3/">Home</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../LR3/leetcode/">Leetcode</a>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../..">Лабораторные работы</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../.." class="icon icon-home" aria-label="Docs"></a></li>
+          <li class="breadcrumb-item">LR2</li>
+      <li class="breadcrumb-item active">Leetcode</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h3 id="minimum-size-subarray-sum">Minimum Size Subarray Sum</h3>
+<p>Given an array of positive integers <code>nums</code> and a positive integer <code>target</code>, return the minimal length of a subarray whose sum is greater than or equal to <code>target</code>. If there is no such subarray, return 0 instead.</p>
+<pre><code class="language-python">class Solution:
+    def minSubArrayLen(self, target: int, nums: List[int]) -&gt; int:
+        left = 0
+        total = 0
+        min_length = float('inf')
+
+        for right in range(len(nums)):
+            total += nums[right]
+
+            while total &gt;= target:
+                min_length = min(min_length, right - left + 1)
+                total -= nums[left]
+                left += 1
+
+        return min_length if min_length != float('inf') else 0
+</code></pre>
+<h3 id="3sum">3Sum</h3>
+<p>Given an integer array <code>nums</code>, return all the triplets <code>[nums[i], nums[j], nums[k]]</code> such that <code>i != j</code>, <code>i != k</code>, and <code>j != k</code>, and <code>nums[i] + nums[j] + nums[k] == 0</code>.</p>
+<pre><code class="language-python">class Solution:
+    def threeSum(self, nums: List[int]) -&gt; List[List[int]]:
+        nums.sort()
+        res = []
+
+        for i in range(len(nums) - 2):
+            if i &gt; 0 and nums[i] == nums[i - 1]:
+                continue
+            left, right = 0, len(nums) - 1
+            while left &lt; right:
+                total = nums[i] + nums[left] + nums[right]
+                if total == 0:
+                    res.append([nums[i], nums[left], nums[right]])
+                    while left &lt; right and nums[left] == nums[left + 1]:
+                        left += 1
+                    while left &lt; right and nums[right] == nums[right - 1]:
+                        right -= 1
+                    left += 1
+                    right -= 1
+                elif total &lt; 0:
+                    left += 1
+                else:
+                    right -= 1
+        return res
+</code></pre>
+<h3 id="spiral-matrix">Spiral Matrix</h3>
+<p>Given an <code>m x n</code> matrix, return all elements of the matrix in spiral order.</p>
+<pre><code class="language-python">class Solution:
+    def spiralOrder(self, matrix: List[List[int]]) -&gt; List[int]:
+        if not matrix:
+            return []
+
+        res = []
+        while matrix:
+            res += matrix.pop(0)
+            if matrix and matrix[0]:
+                for row in matrix:
+                    res.append(row.pop())
+            if matrix:
+                res += matrix.pop()[::-1]
+            if matrix and matrix[0]:
+                for row in matrix[::-1]:
+                    res.append(row.pop(0))
+        return res
+</code></pre>
+<h3 id="valid-sudoku">Valid Sudoku</h3>
+<p>Determine if a 9x9 Sudoku board is valid. Only the filled cells need to be validated according to the following rules:
+- Each row must contain the digits 1-9 without repetition.
+- Each column must contain the digits 1-9 without repetition.
+- Each of the nine 3x3 sub-boxes of the grid must contain the digits 1-9 without repetition.</p>
+<pre><code class="language-python">class Solution:
+    def isValidSudoku(self, board: List[List[str]]) -&gt; bool:
+        rows = [set() for _ in range(9)]
+        cols = [set() for _ in range(9)]
+        boxes = [set() for _ in range(9)]
+
+        for r in range(9):
+            for c in range(9):
+                if board[r][c] == '.':
+                    continue
+                if (board[r][c] in rows[r] or
+                    board[r][c] in cols[c] or
+                    board[r][c] in boxes[(r // 3) * 3 + (c // 3)]):
+                    return False
+                rows[r].add(board[r][c])
+                cols[c].add(board[r][c])
+                boxes[(r // 3) * 3 + (c // 3)].add(board[r][c])
+
+        return True
+</code></pre>
+<h3 id="longest-substring-without-repeating-characters">Longest Substring Without Repeating Characters</h3>
+<p>Given a string <code>s</code>, find the length of the longest substring without repeating characters.</p>
+<pre><code class="language-python">class Solution:
+    def lengthOfLongestSubstring(self, s: String) -&gt; int:
+        char_set = set()
+        left = 0
+        max_length = 0
+
+        for right in range(len(s)):
+            while s[right] in char_set:
+                char_set.remove(s[left])
+                left += 1
+            char_set.add(s[right])
+            max_length = max(max_length, right - left + 1)
+
+        return max_length
+</code></pre>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../" class="btn btn-neutral float-left" title="Home"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../task1/async/" class="btn btn-neutral float-right" title="AsyncIO">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../task1/async/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "../..";</script>
+    <script src="../../js/theme_extra.js"></script>
+    <script src="../../js/theme.js"></script>
+      <script src="../../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>

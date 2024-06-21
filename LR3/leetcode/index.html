@@ -5,15 +5,15 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       <link rel="shortcut icon" href="../../img/favicon.ico" />
-    <title>Database - Лабораторные работы</title>
+    <title>Leetcode - Лабораторные работы</title>
     <link rel="stylesheet" href="../../css/theme.css" />
     <link rel="stylesheet" href="../../css/theme_extra.css" />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
     
       <script>
         // Current page data
-        var mkdocs_page_name = "Database";
-        var mkdocs_page_input_path = "LR1\\db.md";
+        var mkdocs_page_name = "Leetcode";
+        var mkdocs_page_input_path = "LR3\\leetcode.md";
         var mkdocs_page_url = null;
       </script>
     
@@ -44,30 +44,24 @@
                 </li>
               </ul>
               <p class="caption"><span class="caption-text">LR1</span></p>
-              <ul class="current">
-                  <li class="toctree-l1"><a class="reference internal" href="../">Home</a>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../LR1/">Home</a>
                   </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../practices/">Practices</a>
+                  <li class="toctree-l1"><a class="reference internal" href="../../LR1/practices/">Practices</a>
                   </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../leetcode/">Leetcode</a>
+                  <li class="toctree-l1"><a class="reference internal" href="../../LR1/leetcode/">Leetcode</a>
                   </li>
-                  <li class="toctree-l1 current"><a class="reference internal current" href="#">Task</a>
-    <ul class="current">
-                <li class="toctree-l2"><a class="reference internal" href="../auth/">Authentication</a>
+                  <li class="toctree-l1"><a class="reference internal" href="#">Task</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../LR1/auth/">Authentication</a>
                 </li>
-                <li class="toctree-l2 current"><a class="reference internal current" href="./">Database</a>
-    <ul class="current">
-    <li class="toctree-l3"><a class="reference internal" href="#_2">Описание</a>
-    </li>
-    <li class="toctree-l3"><a class="reference internal" href="#_3">Код</a>
-    </li>
-    </ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../LR1/db/">Database</a>
                 </li>
-                <li class="toctree-l2"><a class="reference internal" href="../endpoints/">Endpoints</a>
+                <li class="toctree-l2"><a class="reference internal" href="../../LR1/endpoints/">Endpoints</a>
                 </li>
-                <li class="toctree-l2"><a class="reference internal" href="../main/">Main</a>
+                <li class="toctree-l2"><a class="reference internal" href="../../LR1/main/">Main</a>
                 </li>
-                <li class="toctree-l2"><a class="reference internal" href="../models/">Models</a>
+                <li class="toctree-l2"><a class="reference internal" href="../../LR1/models/">Models</a>
                 </li>
     </ul>
                   </li>
@@ -104,10 +98,12 @@
                   </li>
               </ul>
               <p class="caption"><span class="caption-text">LR3</span></p>
-              <ul>
-                  <li class="toctree-l1"><a class="reference internal" href="../../LR3/">Home</a>
+              <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" href="../">Home</a>
                   </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../../LR3/leetcode/">Leetcode</a>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="./">Leetcode</a>
+    <ul class="current">
+    </ul>
                   </li>
               </ul>
       </div>
@@ -124,9 +120,8 @@
         <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
   <ul class="wy-breadcrumbs">
     <li><a href="../.." class="icon icon-home" aria-label="Docs"></a></li>
-          <li class="breadcrumb-item">LR1</li>
-          <li class="breadcrumb-item">Task</li>
-      <li class="breadcrumb-item active">Database</li>
+          <li class="breadcrumb-item">LR3</li>
+      <li class="breadcrumb-item active">Leetcode</li>
     <li class="wy-breadcrumbs-aside">
     </li>
   </ul>
@@ -135,33 +130,76 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
             <div class="section" itemprop="articleBody">
               
-                <h1 id="_1">Модуль базы данных</h1>
-<p>Этот модуль предоставляет функционал для работы с базой данных и инициализации ее структуры.</p>
-<h2 id="_2">Описание</h2>
-<p>Модуль включает в себя функции для создания таблиц базы данных и управления данными.</p>
-<h2 id="_3">Код</h2>
-<pre><code class="language-python">from sqlmodel import SQLModel, Session, create_engine
-import os
-from dotenv import load_dotenv
+                <h3 id="group-anagrams">Group Anagrams</h3>
+<p>Given an array of strings <code>strs</code>, group the anagrams together. An Anagram is a word or phrase formed by rearranging the letters of a different word or phrase, typically using all the original letters exactly once.</p>
+<pre><code class="language-python">class Solution:
+    def groupAnagrams(self, strs: List[str]) -&gt; List[List[str]]:
+        from collections import defaultdict
 
-load_dotenv()
-engine = create_engine(os.getenv(&quot;DB_URL&quot;), echo=True)
+        anagrams = defaultdict(list)
 
+        for s in strs:
+            sorted_str = ''.join(sorted(s))
+            anagrams[sorted_str].append(s)
 
-def init_db():
-    SQLModel.metadata.create_all(engine)
+        return list(anagrams.values())
+</code></pre>
+<h3 id="longest-consecutive-sequence">Longest Consecutive Sequence</h3>
+<p>Given an unsorted array of integers <code>nums</code>, return the length of the longest consecutive elements sequence. The algorithm must run in O(n) time.</p>
+<pre><code class="language-python">class Solution:
+    def longestConsecutive(self, nums: List[int]) -&gt; int:
+        num_set = set(nums)
+        longest_streak = 0
 
+        for num in num_set:
+            if num - 1 not in num_set:
+                current_num = num
+                current_streak = 1
 
-def get_session():
-    with Session(engine) as session:
-        yield session
+                while current_num + 1 in num_set:
+                    current_num += 1
+                    current_streak += 1
+
+                longest_streak = max(longest_streak, current_streak)
+
+        return longest_streak
+</code></pre>
+<h3 id="game-of-life">Game of Life</h3>
+<p>The board is made up of an <code>m x n</code> grid of cells, where each cell has an initial state: live (represented by a 1) or dead (represented by a 0). Each cell interacts with its eight neighbors (horizontal, vertical, diagonal) using the following four rules:
+- Any live cell with fewer than two live neighbors dies as if caused by under-population.
+- Any live cell with two or three live neighbors lives on to the next generation.
+- Any live cell with more than three live neighbors dies, as if by over-population.
+- Any dead cell with exactly three live neighbors becomes a live cell, as if by reproduction.</p>
+<p>Given the current state of the <code>m x n</code> grid <code>board</code>, return the next state.</p>
+<pre><code class="language-python">class Solution:
+    def gameOfLife(self, board: List[List[int]]) -&gt; None:
+        m, n = len(board), len(board[0])
+
+        def count_neighbors(r, c):
+            count = 0
+            for i in range(max(0, r-1), min(m, r+2)):
+                for j in range(max(0, c-1), min(n, c+2)):
+                    count += board[i][j] &amp; 1
+            count -= board[r][c] &amp; 1
+            return count
+
+        for r in range(m):
+            for c in range(n):
+                live_neighbors = count_neighbors(r, c)
+                if board[r][c] == 1 and (live_neighbors &lt; 2 or live_neighbors &gt; 3):
+                    board[r][c] = 1  # Dies
+                elif board[r][c] == 0 and live_neighbors == 3:
+                    board[r][c] = 2  # Becomes live
+
+        for r in range(m):
+            for c in range(n):
+                board[r][c] &gt;&gt;= 1
 </code></pre>
               
             </div>
           </div><footer>
     <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
-        <a href="../auth/" class="btn btn-neutral float-left" title="Authentication"><span class="icon icon-circle-arrow-left"></span> Previous</a>
-        <a href="../endpoints/" class="btn btn-neutral float-right" title="Endpoints">Next <span class="icon icon-circle-arrow-right"></span></a>
+        <a href="../" class="btn btn-neutral float-left" title="Home"><span class="icon icon-circle-arrow-left"></span> Previous</a>
     </div>
 
   <hr/>
@@ -184,10 +222,8 @@ def get_session():
   <span class="rst-current-version" data-toggle="rst-current-version">
     
     
-      <span><a href="../auth/" style="color: #fcfcfc">&laquo; Previous</a></span>
+      <span><a href="../" style="color: #fcfcfc">&laquo; Previous</a></span>
     
-    
-      <span><a href="../endpoints/" style="color: #fcfcfc">Next &raquo;</a></span>
     
   </span>
 </div>
