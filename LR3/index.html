@@ -1,0 +1,506 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="shortcut icon" href="../img/favicon.ico" />
+    <title>Home - Лабораторные работы</title>
+    <link rel="stylesheet" href="../css/theme.css" />
+    <link rel="stylesheet" href="../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Home";
+        var mkdocs_page_input_path = "LR3\\index.md";
+        var mkdocs_page_url = null;
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href=".." class="icon icon-home"> Лабораторные работы
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="..">Home</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">LR1</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../LR1/">Home</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../LR1/practices/">Practices</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="#">Task</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../LR1/auth/">Authentication</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../LR1/db/">Database</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../LR1/endpoints/">Endpoints</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../LR1/main/">Main</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../LR1/models/">Models</a>
+                </li>
+    </ul>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">LR2</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../LR2/">Home</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="#">Task 1</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../LR2/task1/async/">AsyncIO</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../LR2/task1/thread/">Threading</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../LR2/task1/multiproc/">Multiprocessing</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="#">Task 2</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../LR2/task2/db/">Database</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../LR2/task2/url/">URLs</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../LR2/task2/parse_async/">AsyncIO</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../LR2/task2/parse_thread/">Threading</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../LR2/task2/parse_multiproc/">Multiprocessing</a>
+                </li>
+    </ul>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">LR3</span></p>
+              <ul class="current">
+                  <li class="toctree-l1 current"><a class="reference internal current" href="./">Home</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#_1"></a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#1-fastapi-docker">Подзадача 1: Упаковка FastAPI приложения, базы данных и парсера данных в Docker</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#http-fastapi-socket">Реулизуйте возможность вызова парсера по http Для этого можно сделать отдельное приложение FastAPI для парсера или воспользоваться библиотекой socket или подобными.</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#dockerfile">Разработка Dockerfile:</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#docker-compose">Создание Docker Compose файла</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#2-fastapi">Подзадача 2: Вызов парсера из FastAPI</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#parser_apimainpy_1">parser_api/main.py</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#parser_apimodelspy">parser_api/models.py</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#appmodelspy">app/models.py</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#3-fastapi">Подзадача 3: Вызов парсера из FastAPI через очередь</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#celery-url">Необходимо создать файл конфигурации для Celery. Определть задачу для парсинга URL, которая будет выполняться в фоновом режиме.</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#redis-celery-worker-docker-composeyml">Необходимо добавить сервисы для Redis и Celery worker в docker-compose.yml. Определите зависимости между сервисами, чтобы обеспечить корректную работу оркестра.</a>
+    </li>
+        </ul>
+    </li>
+        </ul>
+    </li>
+    </ul>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="..">Лабораторные работы</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href=".." class="icon icon-home" aria-label="Docs"></a></li>
+          <li class="breadcrumb-item">LR3</li>
+      <li class="breadcrumb-item active">Home</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="3-fastapi-docker">Лабораторная работа 3: Упаковка FastAPI приложения в Docker, Работа с источниками данных и Очереди</h1>
+<h2 id="_1"><details></h2>
+<summary>Цель</summary>
+<p>Научиться упаковывать FastAPI приложение в Docker, интегрировать парсер данных с базой данных и вызывать парсер через API и очередь.
+</details></p>
+<h3 id="1-fastapi-docker">Подзадача 1: Упаковка FastAPI приложения, базы данных и парсера данных в Docker</h3>
+<p>Docker — это платформа для разработки, доставки и запуска приложений в контейнерах. Контейнеры позволяют упаковать приложение и все его зависимости в единый образ, который можно запускать на любой системе, поддерживающей Docker, что обеспечивает консистентность среды выполнения и упрощает развертывание. Docker помогает ускорить разработку, повысить гибкость и масштабируемость приложений.</p>
+<ul>
+<li>
+<p>Создание FastAPI приложения: Создано в рамках лабораторной работы номер 1</p>
+</li>
+<li>
+<p>Создание базы данных: Создано в рамках лабораторной работы номер 1</p>
+</li>
+<li>
+<p>Создание парсера данных: Создано в рамках лабораторной работы номер 2</p>
+</li>
+</ul>
+<h4 id="http-fastapi-socket">Реулизуйте возможность вызова парсера по http Для этого можно сделать отдельное приложение FastAPI для парсера или воспользоваться библиотекой socket или подобными.</h4>
+<p><strong>Решение:</strong></p>
+<h5 id="parser_apimainpy">parser_api/main.py</h5>
+<pre><code class="language-python">from fastapi import FastAPI, HTTPException, Depends, status, BackgroundTasks
+from db import get_session
+from url_parser import parse_and_save
+from models import Article
+import uvicorn
+
+app = FastAPI()
+
+@app.post(&quot;/parse&quot;)
+def parse(url: str, background_tasks: BackgroundTasks, session=Depends(get_session)):
+    try:
+        background_tasks.add_task(parse_and_save, url, session)
+    except Exception as e:
+        raise HTTPException(status_code=status.HTTP_400_BAD_REQUEST, detail=str(e))
+    return {&quot;message&quot;: &quot;Parsing started&quot;}
+</code></pre>
+<h5 id="parser_apiurl_parserpy">parser_api/url_parser.py</h5>
+<pre><code class="language-python">import requests
+from bs4 import BeautifulSoup
+from models import Article
+from celery_main import celery_app
+
+def parse_and_save(url, db_session):
+    try:
+        response = requests.get(url)
+        response.raise_for_status()
+
+        content = response.text
+        soup = BeautifulSoup(content, 'html.parser')
+        title = soup.find('h1', class_='tm-title').get_text(strip=True)
+        text = soup.find('div', class_='tm-article-body').get_text(strip=True)
+
+        article = Article(title=title, url=url, text=text)
+        db_session.add(article)
+        db_session.commit()
+    except requests.RequestException as e:
+        print(f&quot;An error occurred: {e}&quot;)
+</code></pre>
+<h4 id="dockerfile">Разработка Dockerfile:</h4>
+<p>Необходимо создать Dockerfile для упаковки FastAPI приложения и приложения с паресером. В Dockerfile указать базовый образ, установить необходимые зависимости, скопировать исходные файлы в контейнер и определить команду для запуска приложения.</p>
+<p><strong>Решение:</strong></p>
+<h5 id="parser_apidockerfile">parser_api/Dockerfile</h5>
+<pre><code class="language-Dockerfile">FROM python:3.11-slim
+
+WORKDIR /parser_api
+
+COPY requirements.txt requirements.txt
+RUN pip install --no-cache-dir --upgrade -r requirements.txt
+
+COPY . .
+
+EXPOSE 8080
+
+CMD [&quot;uvicorn&quot;, &quot;main:app&quot;, &quot;--host&quot;, &quot;0.0.0.0&quot;, &quot;--port&quot;, &quot;8080&quot;]
+</code></pre>
+<h5 id="appdockerfile">app/Dockerfile</h5>
+<pre><code class="language-Dockerfile">FROM python:3.11-slim
+
+WORKDIR /app
+
+COPY requirements.txt requirements.txt
+RUN pip install --no-cache-dir --upgrade -r requirements.txt
+
+COPY . .
+
+CMD [&quot;uvicorn&quot;, &quot;main:app&quot;, &quot;--host&quot;, &quot;0.0.0.0&quot;, &quot;--port&quot;, &quot;80&quot;]
+</code></pre>
+<h4 id="docker-compose">Создание Docker Compose файла</h4>
+<p>Необходимо написать docker-compose.yml для управления оркестром сервисов, включающих FastAPI приложение, базу данных и парсер данных. Определите сервисы, укажите порты и зависимости между сервисами.</p>
+<p><strong>Решение:</strong></p>
+<h5 id="docker-composeyaml">docker-compose.yaml</h5>
+<pre><code class="language-yaml">version: '3.8'
+
+services:
+  fastapi_app:
+    build:
+      context: ./app
+      dockerfile: Dockerfile
+    ports:
+      - &quot;8000:80&quot;
+    env_file:
+      - .env
+    depends_on:
+      - db
+    networks:
+      - backend
+
+  parser_api:
+    build:
+      context: ./parser_api
+      dockerfile: Dockerfile
+    ports:
+      - &quot;8080:8080&quot;
+    env_file:
+      - .env
+    depends_on:
+      - db
+    networks:
+      - backend
+
+  db:
+    image: postgres
+    restart: always
+    environment:
+      POSTGRES_USER: ${DB_USER}
+      POSTGRES_PASSWORD: ${DB_PASSWORD}
+      POSTGRES_DB: ${DB_NAME}
+    ports:
+      - &quot;5432:5432&quot;
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    networks:
+      - backend
+
+volumes:
+  postgres_data:
+</code></pre>
+<h3 id="2-fastapi">Подзадача 2: Вызов парсера из FastAPI</h3>
+<p><strong>Эндпоинт в FastAPI для вызова парсера</strong>
+Необходимо добавить в FastAPI приложение ендпоинт, который будет принимать запросы с URL для парсинга от клиента, отправлять запрос парсеру (запущенному в отдельном контейнере) и возвращать ответ с результатом клиенту.</p>
+<p><strong>Решение:</strong></p>
+<h5 id="parser_apimainpy_1">parser_api/main.py</h5>
+<pre><code class="language-python">from fastapi import FastAPI, HTTPException, Depends, status, BackgroundTasks
+from db import get_session
+from url_parser import parse_and_save
+from models import Article
+import uvicorn
+
+app = FastAPI()
+
+@app.post(&quot;/parse&quot;)
+def parse(url: str, background_tasks: BackgroundTasks, session=Depends(get_session)):
+    try:
+        background_tasks.add_task(parse_and_save, url, session)
+    except Exception as e:
+        raise HTTPException(status_code=status.HTTP_400_BAD_REQUEST, detail=str(e))
+    return {&quot;message&quot;: &quot;Parsing started&quot;}
+
+@app.get(&quot;/articles&quot;)
+def get_articles(session=Depends(get_session)) -&gt; list[Article]:
+    articles = session.query(Article).all()
+    return articles
+
+@app.get(&quot;/article/{article_id}&quot;)
+def get_article(article_id: int, session=Depends(get_session)):
+    article = session.get(Article, article_id)
+    if article is None:
+        raise HTTPException(status_code=status.HTTP_404_NOT_FOUND, detail=&quot;Article not found&quot;)
+    return article
+
+if __name__ == '__main__':
+    uvicorn.run('main:app', host=&quot;0.0.0.0&quot;, port=8080, reload=True)
+</code></pre>
+<h5 id="parser_apimodelspy">parser_api/models.py</h5>
+<pre><code class="language-python">from sqlmodel import SQLModel, Field
+
+class Article(SQLModel, table=True):
+    id: int | None = Field(default=None, primary_key=True)
+    title: str
+    url: str
+    text: str
+</code></pre>
+<h5 id="appmodelspy">app/models.py</h5>
+<pre><code class="language-python">...
+class Article(SQLModel, table=True):
+    id: int | None = Field(default=None, primary_key=True)
+    title: str
+    url: str
+    text: str
+</code></pre>
+<h3 id="3-fastapi">Подзадача 3: Вызов парсера из FastAPI через очередь</h3>
+<p><strong>Задание</strong>
+* Установить Celery и Redis</p>
+<ul>
+<li>Необходимо добавить зависимости для Celery и Redis в проект. Celery будет использоваться для обработки задач в фоне, а Redis будет выступать в роли брокера задач и хранилища результатов.</li>
+</ul>
+<h4 id="celery-url">Необходимо создать файл конфигурации для Celery. Определть задачу для парсинга URL, которая будет выполняться в фоновом режиме.</h4>
+<h5 id="parser_apicelery_mainpy">parser_api/celery_main.py</h5>
+<pre><code class="language-python">from celery import Celery
+import os
+
+celery_app = Celery(
+    &quot;worker&quot;,
+    broker=os.getenv(&quot;CELERY_BROKER_URL&quot;, &quot;redis://redis:6379/0&quot;),
+    backend=os.getenv(&quot;CELERY_RESULT_BACKEND&quot;, &quot;redis://redis:6379/0&quot;),
+)
+
+celery_app.conf.update(
+    task_routes={
+        &quot;url_parser.parse_and_save&quot;: &quot;main-queue&quot;,
+    },
+)
+</code></pre>
+<h5 id="parser_apicelery_runpy">parser_api/celery_run.py</h5>
+<pre><code class="language-python">from celery_main import celery_app
+
+if __name__ == &quot;__main__&quot;:
+    celery_app.start()
+</code></pre>
+<h5 id="parser_apiurl_parserpy_1">parser_api/url_parser.py</h5>
+<pre><code class="language-python">import requests
+...
+@celery_app.task
+def parse_and_save(url, db_session):
+    try:
+...
+        print(f&quot;An error occurred: {e}&quot;)
+</code></pre>
+<h4 id="redis-celery-worker-docker-composeyml">Необходимо добавить сервисы для Redis и Celery worker в docker-compose.yml. Определите зависимости между сервисами, чтобы обеспечить корректную работу оркестра.</h4>
+<p><strong>Решение</strong></p>
+<h5 id="docker-composeyaml_1">docker-compose.yaml</h5>
+<pre><code class="language-yaml">version: '3.8'
+
+services:
+  fastapi_app:
+    build:
+      context: ./app
+      dockerfile: Dockerfile
+    ports:
+      - &quot;8000:80&quot;
+    env_file:
+      - .env
+    depends_on:
+      - db
+    networks:
+      - backend
+
+  parser_api:
+    build:
+      context: ./parser_api
+      dockerfile: Dockerfile
+    ports:
+      - &quot;8080:8080&quot;
+    env_file:
+      - .env
+    depends_on:
+      - db
+      - redis
+    networks:
+      - backend
+
+  db:
+    image: postgres
+    restart: always
+    environment:
+      POSTGRES_USER: ${DB_USER}
+      POSTGRES_PASSWORD: ${DB_PASSWORD}
+      POSTGRES_DB: ${DB_NAME}
+    ports:
+      - &quot;5432:5432&quot;
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    networks:
+      - backend
+
+  redis:
+    image: redis:6
+    ports:
+      - &quot;6379:6379&quot;
+    networks:
+      - backend
+
+  celery_worker:
+    build:
+      context: ./parser_api
+      dockerfile: Dockerfile
+    command: [&quot;celery&quot;, &quot;-A&quot;, &quot;celery_main.celery_app&quot;, &quot;worker&quot;, &quot;--loglevel=info&quot;]
+    env_file:
+      - .env
+    depends_on:
+      - redis
+      - db
+    networks:
+      - backend
+
+volumes:
+  postgres_data:
+
+networks:
+  backend:
+    driver: bridge
+</code></pre>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../LR2/task2/parse_multiproc/" class="btn btn-neutral float-left" title="Multiprocessing"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../LR2/task2/parse_multiproc/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+  </span>
+</div>
+    <script src="../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "..";</script>
+    <script src="../js/theme_extra.js"></script>
+    <script src="../js/theme.js"></script>
+      <script src="../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>
