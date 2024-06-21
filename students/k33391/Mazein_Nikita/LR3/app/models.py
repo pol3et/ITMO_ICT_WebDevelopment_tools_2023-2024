@@ -99,3 +99,9 @@ class UserShow(UserBase):
 class ChangePassword(SQLModel):
     old_password: str
     new_password: str
+
+class Article(SQLModel, table=True):
+    id: int | None = Field(default=None, primary_key=True)
+    title: str
+    url: str
+    text: str

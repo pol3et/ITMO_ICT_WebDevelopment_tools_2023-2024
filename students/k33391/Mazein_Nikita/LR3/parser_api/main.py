@@ -1,7 +1,7 @@
 from fastapi import FastAPI, HTTPException, Depends, status, BackgroundTasks
 from db import get_session
 from url_parser import parse_and_save
-from schemas import Article
+from models import Article
 import uvicorn
 
 app = FastAPI()
@@ -27,4 +27,4 @@ def get_article(article_id: int, session=Depends(get_session)):
     return article
 
 if __name__ == '__main__':
-    uvicorn.run('main:app', host="localhost", port=8001, reload=True)
+    uvicorn.run('main:app', host="0.0.0.0", port=8080, reload=True)
